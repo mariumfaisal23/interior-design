@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: "Playfair Display", serif;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0px 5%;
+    background-color: #578372;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+}
+.logo{
+    color: #fff;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 700;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.menu li{
+    padding: 0px 20px;
+}
+.menu li a{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(212,212,212);
+    position: relative;
+}
+.menu li a::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #f9bf29;
+    transform-origin: right top;
+    transition: all 0.2s ease-out;
+}
+.menu li .active::before{
+width: 100%;
+}
+.menu li a:active::before{
+    background-color: #000;
+}
+.menu li a:hover::before{
+    width: 100%;
+}
+.nav-icons i{
+    padding: 0px 20px;
+    color: #fff;
+}
+.bars{
+    display: none;
+}
+section{
+    overflow-x: hidden;
+}
+.hero{
+    background-color: #3b5d50;
+    padding: 80px 5%;
+    padding-bottom: 0;
+}
+.hero-main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.hero-info{
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-info h1{
+    font-size: 3.4rem;
+    color: #fff;
+    margin-bottom:10px ;
+        font-style: oblique;
+}
+.hero-info h1 span{
+    color: #f9bf29;
+    font-style: oblique;
+}
+.hero-info p{
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 15px;
+    margin: 20px 0px;
+    line-height: 30px;
+}
+.btns button{
+    height: 50px;
+    padding: 0px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+.btns :nth-child(1){
+    background-color: #f9bf29;
+    border: none;
+    margin-right: 10px;  
+}
+.btns  :nth-child(2){
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.315);
+    transition: all 0.5s ease-in-out;
+}
+.btns :nth-child(2):hover{
+    border: 2px solid #fff;
+}
+.btns :nth-child(1):hover{
+    background-color: #253a32;
+    color: #fff;
+}
+.hero-img{
+    width: 70%;
+    position: relative;
+}
+.hero-img img{
+    position: relative;
+    width: 100%;
+    left: 80px;
+    z-index: 1;
+    bottom: 80px;
+}
+.dots img{
+    position: absolute;
+    top: 100px;
+    left: 180px;
+    z-index: 0;
+    width: 20%;
+    height: 140px;
+}
